@@ -19,7 +19,8 @@ app.use(express.static(path.join(__dirname, "dist")))
 
 
 app.use(cors({
-    origin: "https://submission-c.onrender.com",
+    // origin: "https://submission-c.onrender.com",
+    origin: "http://localhost:5173",
     credentials: true
 }))
 

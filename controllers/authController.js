@@ -38,7 +38,7 @@ exports.signupUser = asyncHandler(async (req, res) => {
         // login
         if (result) {
 
-            await fs.unlink(path.join(__dirname, "..", "profiles", result.profile))
+            // await fs.unlink(path.join(__dirname, "..", "profiles", result.profile))
             // update image
             await User.findByIdAndUpdate(result._id, { profile: req.file.filename })
             const compare = await bcrypt.compare(password, result.password)
